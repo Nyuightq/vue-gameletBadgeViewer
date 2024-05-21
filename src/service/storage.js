@@ -1,6 +1,6 @@
 const storageKey = {
     USER_LIST: "searchUser",
-    PROJECT_LIST: "searchPorject",
+    PROJECT_LIST: "searchProject",
     USER_SETTINGS: "userSettings",
     SCORE_MODE: "scoreMode"
 }
