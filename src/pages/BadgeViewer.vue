@@ -238,9 +238,9 @@ onMounted(() => {
     <Sidebar id="profile-sidebar"
       :usernameInput="usernameInput"
       :projectInput="projectInput"
-        class="fixed top-0 left-0 z-10 w-80 max-w-full h-screen transition-transform md:translate-x-0 drop-shadow-md scroll-smooth"/>
+        class="fixed top-0 left-0 z-10 w-80 max-w-full h-screen text-neutral-900 transition-transform md:translate-x-0 drop-shadow-md scroll-smooth"/>
 
-    <main class="p-3 sm:p-4 md:ml-80 min-h-screen transition-all dark:bg-gray-800/95">
+    <main class="p-3 sm:p-4 md:ml-80 min-h-screen transition-all bg-white text-neutral-900 dark:bg-gray-800/95">
       <h2 class="text-sky-700 dark:text-sky-600 font-bold mb-4">專案勳章檢視</h2>
       <div class="p-0 sm:p-4 sm:border-2 sm:border-gray-200 dark:border-gray-500 sm:border-dashed sm:rounded-lg">
         <ProjectCard />
