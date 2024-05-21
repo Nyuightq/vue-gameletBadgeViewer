@@ -289,9 +289,9 @@ onMounted(() => {
         <div class="flex flex-col">
             <button type="button" v-for="ele in user.userListHistory" @click="selectOption(ele.id, 'USER')" class="flex flex-row flex-1 items-center gap-x-4 rounded-xl md:rounded-3xl p-3  bg-base-100 shadow-sm bg-slate-500/5 hover:bg-slate-500/25 transition-colors duration-150 cursor-pointer w-100">
                <figure class="block"><img class="rounded-xl min-w-8 h-8 md:rounded-2xl md:h-12 md:w-12"
-                  :src="ele?.user.iconUrl || ele.iconUrl" alt="avatar"/></figure>
+                  :src="ele?.user?.iconUrl || ele?.iconUrl" alt="avatar"/></figure>
                <div class="truncate me-auto text-start">
-                  <p class="block truncate text-sky-700 dark:text-sky-600">{{ ele?.user.nickname || ele?.name }}</p>
+                  <p class="block truncate text-sky-700 dark:text-sky-600">{{ ele?.user?.nickname || ele?.name }}</p>
                   <p class="text-xs block truncate">{{ ele.id }}</p>
                </div>
 
@@ -324,7 +324,7 @@ onMounted(() => {
         <p class="py-4 font-bold ">快速搜索（歷史記錄）</p>
         <div class="flex flex-col">
             <button v-for="ele in project.projectListHistory" @click="selectOption(ele.id, 'PROJECT')" class="flex flex-col sm:flex-row sm:justify-start flex-1 items-center gap-x-4 rounded-xl md:rounded-3xl p-3  bg-base-100 shadow-sm bg-slate-500/5 hover:bg-slate-500/25 transition-colors duration-150 cursor-pointer w-100">
-               <figure><img class="rounded-xl w-40 object-cover sm:w-20 h-20 sm:h-12 md:rounded-2xl" :src="ele.cover" alt="avatar"/></figure>
+               <figure><img class="rounded-xl w-40 object-cover sm:w-20 h-20 sm:h-12 md:rounded-2xl" :src="ele?.cover || ele?.iconUrl" alt="avatar"/></figure>
                <div class="flex flex-grow flex-1 w-full text-start">
                   <div class="truncate me-auto">
                      <p class="block truncate text-sky-700 dark:text-sky-600">{{ ele.name }}</p>
