@@ -27,7 +27,10 @@ import { formatTime } from '@/utilities.js'
 
 const badgeBtn = ref()
 const showModal = ref(false)
-const toggleModal = () => { showModal.value = !showModal.value; }
+function toggleModal() { 
+  showModal.value = !showModal.value; 
+  badgeBtn.value.blur(); 
+}
 onMounted(() => {
   document.addEventListener('keydown', (event) => {
     if (showModal.value === true && event.key === 'Escape') {
