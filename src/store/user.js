@@ -10,9 +10,9 @@ export const userStore = defineStore("userStore", {
         isDarkmode: SETTINGS?.isDarkmode || false,
         lang: SETTINGS?.lang || 'zh-Hant',
         usernameTemp: '',
-        username: USER?.username || "Nyuightq",
-        name: USER?.name || "Nyuightq",
-        iconUrl: USER?.iconUrl || "https://gamelet.online/gassets/svr/user/icon/1g1/624e575a7cec4.png",
+        username: USER?.username || USER?.user?.username || "Nyuightq",
+        name: USER?.name || USER?.user?.nickname || "Nyuightq",
+        iconUrl: USER?.iconUrl || USER?.user?.iconUrl || "https://gamelet.online/gassets/svr/user/icon/1g1/624e575a7cec4.png",
         
         userDetail: null,
         teamDetail: null,
