@@ -32,7 +32,8 @@ async function checkProject(projectID) {
       return false;
    }
    if ( projectDetail.clients[0].cover == "" ) {
-      modal.openMessageModal("專案 '" + projectID + "' 推測為模組專案，請轉到『模組更新日誌』頁面");
+      modal.openMessageModal("專案 '" + projectID + "' 推測為模組專案");
+      // modal.openMessageModal("專案 '" + projectID + "' 推測為模組專案，請轉到『模組更新日誌』頁面");
       return false;
    }
    return projectDetail;
@@ -99,7 +100,7 @@ const submitLeaderboard = async (key = score.key, name = score.name, unit = scor
 }
 
 const checkScoremodes = async () => {
-   if (score.projectID === project.projectID) return;
+   // if (score.projectID === project.projectID) return;
    const modesListResult = await fetchApi(API_TARGET.SCORE_MODES(user.lang, project.projectID));
    score.scoreModesList = modesListResult.list;
    score.projectID = project.projectID;

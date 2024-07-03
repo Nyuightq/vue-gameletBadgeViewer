@@ -77,7 +77,7 @@
                     <small class=" text-sm">*僅提取最前面16個排行榜</small>
                 </span>
             </div>
-            <div class="dropdown">
+            <div class="dropdown mt-3">
                 <div tabindex="0" class="btn btn-sm m-1 ">{{ score.scoreDurationLabelToString(score.profileDuration) }}</div>
                 <ul tabindex="0"
                     class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box max-w-max w-52">

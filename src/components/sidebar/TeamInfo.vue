@@ -15,7 +15,7 @@
             </div>
 
             <div class="p-3 py-0 mb-2 flex items-center gap-2">
-                <a target="_blank" class="btn btn-circle btn-xs end-0">
+                <a target="_blank" class="btn btn-circle btn-xs end-0" :href="'https://gamelet.online/team/' + user.teamDetail.teamship.team.teamname">
                     <svg
                         xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-link-45deg" viewBox="0 0 16 16">
