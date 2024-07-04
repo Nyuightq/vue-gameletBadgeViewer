@@ -103,11 +103,18 @@ const checkScoremodes = async () => {
    // if (score.projectID === project.projectID) return;
    const modesListResult = await fetchApi(API_TARGET.SCORE_MODES(user.lang, project.projectID));
    score.scoreModesList = modesListResult.list;
-   score.projectID = project.projectID;
 
    const firstMode = score.scoreModesList[0];
-   submitLeaderboard(firstMode.key, firstMode.name, firstMode.unit);
    submitProfileLeaderbaord();
+
+   if (score.projectID !== project.projectID) {
+      submitLeaderboard(firstMode.key, firstMode.name, firstMode.unit);
+   }
+   else {
+      submitLeaderboard(score.key, score.name, score.unit);
+   }
+
+   score.projectID = project.projectID;
 }
 
 const submitProject = async (init = null) => { 
