@@ -267,6 +267,7 @@ onMounted(() => {
         @call-leaderboard="(key, name, unit) => submitLeaderboard(key, name, unit)" 
         @update-leaderboard="()=>submitLeaderboard()"
         @update-profile-board="()=>submitProfileLeaderbaord()"
+        @search-profile="(username)=>submitUsername(username)"
         v-if="score.scoreModesList.length !== 0" />
       </div>
     </main>
