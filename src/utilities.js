@@ -33,6 +33,19 @@ function convertScore (score, unit) {
             
             return `${formattedMinutes}:${formattedSeconds}:${formattedMilliseconds}`;
         },
+        'sec': (score) => {
+            if (typeof score !== 'number' || score < 0) {
+                console.warn('The score type with sec is negative value');
+                return null;
+            }
+            const minutes = Math.floor(score / 60);
+            const seconds = score % 60;
+
+            const formattedMinutes = minutes.toString().padStart(2, '0');
+            const formattedSeconds = seconds.toString().padStart(2, '0');
+            
+            return `${formattedMinutes}:${formattedSeconds}`;
+        },
         'default': (score) => score,
     };
 
